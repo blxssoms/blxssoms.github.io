@@ -6,7 +6,7 @@ const REPO_NAME = "blxssoms.github.io";
 const FILE_PATH = "data/scores.json"; // relative to repo root
 
 function escapeHtml(s) {
-  return String(s).replace(/[&<>"']/g, m => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[m]);
+  return String(s).replace(/[&<>\"']/g, m => ({ '&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'})[m]);
 }
 
 async function fetchScores() {
