@@ -1,12 +1,12 @@
 [
   {
     "id": "a1",
-    "name": "Alice",
-    "score": 100
+    "name": "test2",
+    "score": -10
   },
   {
     "id": "b2",
-    "name": "Bob",
-    "score": 80
+    "name": "test",
+    "score": 1000
   }
 ]
