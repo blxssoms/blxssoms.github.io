@@ -1,21 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scores</title>
+  <style>
+    :root{--bg:#f5f7fb;--card:#fff;--muted:#6b7280;--accent:#3b82f6}
+    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial;padding:24px;background:var(--bg);color:#111827}
+    header{display:flex;gap:8px;margin-bottom:16px;align-items:center;flex-wrap:wrap}
+    .person-grid{display:flex;flex-direction:column;gap:12px;margin-top:12px}
+    .person-card{background:var(--card);border-radius:12px;padding:12px 14px;box-shadow:0 1px 3px rgba(0,0,0,0.06);display:flex;align-items:center;gap:12px;border:1px solid #e6edf5}
+    .person-info{display:flex;flex-direction:column}
+    .person-name{font-weight:700;font-size:1.05rem}
+    .person-score{font-weight:600;color:var(--accent);margin-top:6px}
+    button,.link-btn{cursor:pointer;padding:8px 12px;border:1px solid #e5e7eb;background:#fff;border-radius:8px}
+    .muted{color:var(--muted)}
+    .hidden{display:none!important}
+    @media (max-width:520px){.person-card{flex-direction:column;align-items:flex-start}}
+  </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="category1.html">Category 1</a></li>
-            <li><a href="category2.html">Category 2</a></li>
-        </ul>
-    </nav>
-    <h1>Welcome to the Category Sections</h1>
-    <script src="script.js"></script>
+  <h1>Scores</h1>
+
+  <header>
+    <a class="link-btn" href="#scores">Go to Scores</a>
+    <a class="link-btn" id="go-add" href="#add">Go to Add (page anchor)</a>
+    <div style="margin-left:auto">
+      <!-- Owner-only edit link (opens GitHub edit page) -->
+      <a id="edit-on-github" class="link-btn" target="_blank" rel="noopener">Edit scores on GitHub</a>
+    </div>
+  </header>
+
+  <section id="add" style="margin-bottom:18px">
+    <h2>About editing scores</h2>
+    <p class="muted">To change scores, click "Edit scores on GitHub" (above). That opens the file in the GitHub web editor so you can modify the canonical data and commit. Only you can commit changes to this repository's main branch.</p>
+  </section>
+
+  <section id="scores">
+    <h2>People & Scores</h2>
+    <div id="people-list" class="person-grid" aria-live="polite"></div>
+    <p id="empty-text" class="muted">Loading...</p>
+  </section>
+
+  <footer style="margin-top:24px" class="muted">
+    <small>Scores are loaded from <code>data/scores.json</code> in this repository — edit that file to update the scores (owner-only).</small>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
