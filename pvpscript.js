@@ -3,7 +3,7 @@
 
 const REPO_OWNER = "blxssoms";
 const REPO_NAME = "blxssoms.github.io";
-const FILE_PATH = "data/scores.json"; // relative to repo root
+const FILE_PATH = "data/pvpscores.json"; // relative to repo root
 
 function escapeHtml(s) {
   return String(s).replace(/[&<>\"']/g, m => ({ '&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'})[m]);
