@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -21,15 +20,6 @@
 </head>
 <body>
   <h1>Tag Scores</h1>
-
-  <header>
-    <a class="link-btn" href="pvp">PvP</a>
-    <a class="link-btn" id="go-add" href="tag">Tag</a>
-    <div style="margin-left:auto">
-      <!-- Owner-only edit link (opens GitHub edit page) -->
-      <a id="edit-on-github" class="link-btn" target="_blank" rel="noopener">Edit scores on GitHub</a>
-    </div>
-  </header>
 
 
   <section id="scores">
