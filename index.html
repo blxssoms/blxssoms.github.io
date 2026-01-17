@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tag Scores</title>
+  <title>Scores</title>
   <style>
     :root{--bg:#f5f7fb;--card:#fff;--muted:#6b7280;--accent:#3b82f6}
     body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial;padding:24px;background:var(--bg);color:#111827}
@@ -20,13 +20,21 @@
   </style>
 </head>
 <body>
-  <h1>Tag Scores</h1>
+  <h1>Scores</h1>
 
   <header>
-    <a class="link-btn" href="pvp">PvP</a>
-    <a class="link-btn" id="tag" href="tag">Tag</a>
+    <a class="link-btn" href="#scores">Go to Scores</a>
+    <a class="link-btn" id="go-add" href="#add">Go to Add (page anchor)</a>
+    <div style="margin-left:auto">
+      <!-- Owner-only edit link (opens GitHub edit page) -->
+      <a id="edit-on-github" class="link-btn" target="_blank" rel="noopener">Edit scores on GitHub</a>
+    </div>
   </header>
 
+  <section id="add" style="margin-bottom:18px">
+    <h2>About editing scores</h2>
+    <p class="muted">To change scores, click "Edit scores on GitHub" (above). That opens the file in the GitHub web editor so you can modify the canonical data and commit. Only you can commit changes to this repository's main branch.</p>
+  </section>
 
   <section id="scores">
     <h2>People & Scores</h2>
@@ -34,6 +42,9 @@
     <p id="empty-text" class="muted">Loading...</p>
   </section>
 
+  <footer style="margin-top:24px" class="muted">
+    <small>Scores are loaded from <code>data/scores.json</code> in this repository — edit that file to update the scores (owner-only).</small>
+  </footer>
 
   <script src="script.js"></script>
 </body>
